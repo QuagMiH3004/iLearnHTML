@@ -156,8 +156,16 @@ Viết các thuộc tính này vào **khối cha**:
     justify-content: center; /* Căn giữa các con theo chiều ngang */
     align-items: center;     /* Căn giữa các con theo chiều dọc */
 }
-```
 
+```
 #### Các trường hợp căn giữa khác:
 *   **Căn giữa dòng chữ văn bản:** Viết `text-align: center;` vào **khối cha** chứa dòng chữ đó.
 *   **Căn giữa một khối div độc lập:** Nếu khối div đó đã có kích thước `width` cố định, viết `margin: 0 auto;` vào **chính khối div đó** để nó tự căn đều lề trái phải dạt ra giữa trang.
+
+---
+
+### CSS nâng cao
+ *ghim chặt vào khung browser, cuộn lên cuộn xuống vẫn ở đó:
+ ```css
+ position: fixed;
+ ```
