@@ -1,0 +1,25 @@
+let: biến có thể thay đổi
+const: hằng số
+let i = 1;
+console.log("Hello"); : in ra tab console của browser
+alert("Notification"); : hiện bảng pop-up thông báo lên màn hình
+document : đại diện cho HTML (lấy từ file HTML)
+addEventListener lắng nghe sự kiện của 1 vật
+    button: click // ấn
+            mouseover // chuột đi qua
+            keydown // ấn phím
+function () {} : hàm callback (gọi lại sau, chưa gọi now)
+sbutton.addEventListener("click", function() {
+    // hành động cho nó làm.
+    })
+/// --- \\\ Truy cập
+Đổi chữ, nội dung : Đối tượng thẻ -> thuộc tính chữ = "new text"; // .innerText || .innerHTML
+document.getElementById("header").innerText = "new text";
+Đổi giao diện: Đối tượng thẻ -> hộp con style -> CSS properties = "new value";
+document.querySelector("p"); : tìm thẻ p đầu tiên trong HTML // querySelector()
+    VD: hheader.innerText "mehello";
+    hheader.style.backgroundColor = "black";
+
+/// --- \\\
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+// Cách dùng: await wait() // dùng ms ví dụ await wait(500) = wait 0.5s
