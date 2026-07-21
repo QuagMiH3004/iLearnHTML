@@ -1,0 +1,104 @@
+<!DOCTYPE html> để cho nó đẹp
+<html lang="vi">
+<title></title> Tiêu đề để khai báo với browser
+<meta charset="UTF-8"> (phông tiếng Việt) (đặt trong head)
+<head></head> là nơi khai báo trên cái tab
+<link rel="stylesheet" href="style.css"> link file css vào html
+<body></body> cho hết nội dung vào đây
+    Tiêu đề: h1 (to nhất) đến h6 (nhỏ nhất)
+    đoạn văn: <p></p>
+    link: <a href="https://www.linux.org/pages/download/">Linux distro</a>
+    hình ảnh: <img src="https://www.toilet.boncau/cbd.png" alt="Toilet image">
+        // alt hiển thị văn bản thay thế if ko load được hình
+ul (bắt đầu list) Trong ul chỉ được chứa li
+    li(list)
+/// --- \\\
+form : thẻ để gom input/ label/ button lại.
+input id ="txt" type="text" // Nhập chữ bình thường
+        type="password" // tự động ẩn
+        type="checkbox" // ô tick chọn
+        type="submit" // nút gửi form
+        type="email"
+label for="txt"// để ghi chú cho người dùng biết nhập j (đặt trước input)
+    for // dùng để connect label-input // for của label = id của input
+br // xuống dòng (mặc định các thẻ input sẽ đứng sát nhau trên cùng 1 hàng)
+placeholder // chữ mờ trong input, khi nhập sẽ biết mất (VD)
+div // gom tất cả nội dung vào 1 cái thùng
+button type="submit" // nút gửi
+        type="button" // nếu muốn nhúng Js
+/// --- \\\
+css
+Đặt style ở head
+color // màu chữ
+background-color //  màu nền
+font-size: cỡ chữ (vd 20px)
+width / height: rộng/ cao // tính bằng px hoặc % (tỉ lệ màn hình)
+border // đường viền (border: [độ dày] [kiểu viền] [màu sắc])
+        1px solid red
+    kiểu viền: solid: Đường kẻ liền (Phổ biến nhất).
+                dashed: kẻ đứt quãng (---).
+                dotted: kẻ chấm bi (......).
+                double: kẻ đôi.
+                none: Không có viền (xóa viền của button hoặc input).
+text-align: căn lề chữ (left/ right/ top/ bottom)
+class ký hiệu bằng dấu . (ở style trên css)
+id ký hiệu bằng dấu #
+// viết liên tiếp nhiều thẻ cần 1 thuộc tính bằng dấu "," h1, p, li, ul
+/// --- \\\
+Box model // bố cục web
+ - Content (nội dung) là chữ hoặc hình ảnh (cốt lõi)
+ - Padding // khoảng cách từ nội dung đến viền
+ - Border // viền ngoài bao quanh
+ - Margin // khoảng cách từ viền này đến viền khác
+:hover // dùng cho button khi di chuột vào
+:active // dùng cho button khi ấn xuống
+font-weight để chỉnh font chữ đậm nhạt
+display // dùng để quyết định 1 thẻ được hiển thị thế nào
+        - display: block // khối, chiếm toàn bộ chiều ngang và buộc thẻ sau xuống hàng. Chỉnh được width và height.
+        - display: inline // chiểm vừa khít không gian cho nội dung trong nó, 2 thẻ inline sẽ xếp cạnh nhau.
+        - display: inline-block // xếp hàng ngang với thẻ khác trên cùng 1 dòng nhưng chỉnh được width/ heigt.
+        - display: none // ẩn hoàn toàn khối đó đi
+transition: [thuộc tính] [thời gian] [kiểu chuyển động]
+    - all// áp dụng kiểu chuyển động cho tất cả mọi sự thay đổi. Nếu muốn thay đổi riêng thì viết riêng (vd: background-color 0.2s)
+        - thời gian tính bằng s (0.2s) hoặc ms (200ms).
+            - Kiểu chuyển động: ease // chậm - tăng tốc - chậm
+                                linear // liên tục không nhanh chậm
+                                ease-in // chậm - nhanh dần lên
+                                ease-out // nhanh- chậm dần lại
+cursor: con chuột, chỉnh xem phản ứng thế nào khi chuột di vào
+        - pointer // con trỏ (bàn tay chỉ vào, ấn vào được)
+        - not-allowed // biến thành hình cấm, gạch chéo
+        - wait // đồng hồ cá loading
+        - text // hình chữ I
+        - zoom-in / zoom-out // hình kính lúp, thường dùng cho ảnh
+transform: thay đổi hình dáng, kích thước
+        - scale (0.98) // thu nhỏ đi còn 98% kích thước gốc vật tể
+        - rotate(45deg) // quay 45 độ
+        - translateX(20px) // Dịch chuyển vật thể sang bên phải 20 pixel.
+margin : khoảng cách [trên] [phải] [dưới] [trái]
+// --- \\\
+-- Flexbox là 1 loại ma thuật giúp ta di chuyển này kia các div con trong 1 hộp cha
+Display: flex
+Căn giữa cả cụm con trong flex: justify-content: center; align-items: center; // viết vào cha
+Căn giữa text: text-align: center; // viết vào cha
+Căn giữa div có kích thước cố định: margin: 0 auto; // viết vào chính nó
+// -- \\
+CSS nâng cao
+linear-gradient(to right, red, orange, yellow, green, cyan, blue); // đổi đa sắc css
+        Overlay lớp phủ toàn màn hình
+position: fixed; // ghim chặt vào khung browser, cuộn lên cuộn xuống vẫn ở đó
+top: 0; left: 0; // ghim từ góc trên trái màn hình
+width: 100vw; height: 100vh; // Viewport Width / Viewport Height là đơn vị chia tỉ lệ màn hình, ở đây là to 100% cái màn hình;
+
+backdrop-filter: không làm mờ đứa mang thuộc tính, làm mờ tất cả phía sau nó
+        blur(8px); // làm mờ pixel (phổ biến)
+        brightness(60%) // độ sáng, tối vật thể phía sau
+        grayscale(100%) // biến phía sau thành đen trắng
+background-color: rgba(0, 0, 0, 0.7); // 0.7 là độ trong suốt.
+
+box-shadow: 10px 15px 8px 2px rgba(0, 0, 0, 0.5);
+         Ngang -> Dọc -> Mờ -> To -> Màu
+
+
+
+
